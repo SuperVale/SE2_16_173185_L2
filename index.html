@@ -9,15 +9,18 @@ and open the template in the editor.
         <title>Warehouse</title>
     </head>
     <body>
-        <div>Items stored</div>
+            <div> Items stored: </div>
         
-            <table id="table">
+            <table id="table"></table>
+        
+            <input type = "number" id="item_max">
+            <button id = "max" onclick = "set_max()"> Set max </button> <br>
+        
+            <button onclick = "hide()"> Add Items </button>
+            
+            <div id="warning" style=" display: none;"> Maximun amount of items reached! </div>
 
-            </table>
-        
-            <button onclick = "hide()"> Add Items </button> 
-        
-            <div id = "add_menu" style=" display: none; " >
+            <div id = "add_menu" style=" display: none;">
             <input type = "text" id="item_name">
             <input type = "number" id="item_quantity">
             <button id = "add" onclick = "add()"> Add </button>  
